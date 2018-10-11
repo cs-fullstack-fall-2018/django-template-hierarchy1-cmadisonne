@@ -1,0 +1,28 @@
+{% extends "movieApp/base.html" %}
+
+{# HEADER #}
+{% block header %}
+NEW MOVIEFLIX HEADER
+{% endblock %}
+
+{% block body %}
+{% if movies %}
+    {% for eachMovie in movies %}
+        <div class="jumbotron" align="middle">
+            <h1 class="display-4">{{ eachMovie.name }}</h1>
+            <p class="lead">{{ eachMovie.yearReleased }}</p>
+            <hr class="my-4">
+            <p>Rated {{ eachMovie.rated }}</p>
+            <p>Genre: {{ eachMovie.genre }}</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+    {% endfor %}
+{% else %}
+<p>No Movies are available.</p>
+{% endif %}
+{% endblock %}
+
+{# FOOTER #}
+{% block footer %}
+NEW MOVIEFLIX FOOTER
+{% endblock %}

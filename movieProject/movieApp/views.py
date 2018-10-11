@@ -13,3 +13,8 @@ def about(request):
 
 def test(request):
     return render(request, 'movieApp/test.html')
+
+def newIndex(request):
+    movies = Movies.objects.all()
+    context = {'movies': movies}
+    return render(request, 'movieApp/newIndex.html', context)
