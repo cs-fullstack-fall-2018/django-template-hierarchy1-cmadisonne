@@ -2,16 +2,17 @@
 
 {% block body %}
 {% if movies %}
-<ul>
-
     {% for eachMovie in movies %}
-    <li>{{ eachMovie.name }}</li>
-    <li>{{ eachMovie.yearReleased }}</li>
-    <li>{{ eachMovie.rated }}</li>
-    <li>{{ eachMovie.genre }}</li>
-
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ eachMovie.name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ eachMovie.yearReleased }}</h6>
+                <p class="card-text">{{ eachMovie.rated }}</p>
+                <p class="card-text">{{ eachMovie.genre }}</p>
+                <a href="#" class="card-link">link</a>
+            </div>
+        </div>
     {% endfor %}
-</ul>
 {% else %}
 <p>No Movies are available.</p>
 {% endif %}
