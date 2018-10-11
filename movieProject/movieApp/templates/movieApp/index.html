@@ -6,10 +6,11 @@
             <div class="card-deck">
                 <div class="card text-center" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">{{ eachMovie.name }}</h5>
+                        <strong class="card-title">{{ eachMovie.name }}</strong>
+                        <br>
                         <h6 class="card-subtitle mb-2 text-muted">{{ eachMovie.yearReleased }}</h6>
-                        <p class="card-text">{{ eachMovie.rated }}</p>
-                        <p class="card-text">{{ eachMovie.genre }}</p>
+                        <p class="card-text">Rated {{ eachMovie.rated }}</p>
+                        <p class="card-text">Genre: {{ eachMovie.genre }}</p>
                         <a href="#" class="card-link">link</a>
                     </div>
                 </div>
